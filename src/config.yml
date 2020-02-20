@@ -1,0 +1,5 @@
+onJoin: true
+messages:
+  - 'You are very cool!'
+  - 'You have lots of friends.'
+  - 'You are loved!'
