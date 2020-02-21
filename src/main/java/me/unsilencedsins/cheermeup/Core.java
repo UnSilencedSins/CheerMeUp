@@ -13,7 +13,6 @@ import java.util.List;
 
 public final class Core extends JavaPlugin implements CommandExecutor {
     private boolean onJoin = false;
-    private List<String> messages;
 
 
     @Override
@@ -36,22 +35,26 @@ public final class Core extends JavaPlugin implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
 
-        if (command.getName().equalsIgnoreCase("cheermeup")) player.sendMessage(getMessage());//want a message
-        else if (command.getName().equalsIgnoreCase("cmureload") &&
-                player.hasPermission("cheermeup.cmureload")) {//want to reload the file
-            messages = getMessagesList();
-            player.sendMessage(ChatColor.GREEN + "CMU Config reloaded");
-        }
-        else if (command.getName().equalsIgnoreCase("cheermeupversion"))
+        if (command.getName().equalsIgnoreCase("cheermeup")) //want a message
+            player.sendMessage(ChatColor.GREEN + getMessage());
+        else if (command.getName().equalsIgnoreCase("cheermeupversion")) //gets the version
             player.sendMessage(("Current CheerMeUp Version: " + getDescription().getVersion()));
+        else if (command.getName().equalsIgnoreCase("cheermeupreload") &&
+                player.hasPermission("cheermeup.reload")){
+            reloadConfig();
+            player.sendMessage(ChatColor.GREEN + "Config Reloaded");
+        }
 
         return true;
     }
 
-    private List<String> getMessagesList() {return getConfig().getStringList("messages");}
+    private List<String> getMessagesList() {
+        List<String> messages = getConfig().getStringList("messages");
+        return messages;
+    }
 
     public String getMessage(){
-        messages = getMessagesList();
+        List<String> messages = getMessagesList();
 
         if (messages.size() > 0) return messages.get((int) (Math.random() * messages.size()));
 

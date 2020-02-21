@@ -8,8 +8,9 @@ commands:
   cheermeup:
     description: Sends a message to try to cheer up the user
     aliases: [cmu, imsad]
-  cmureload:
-    description: reloads the values in the config for the game to send properly.
   cheermeupversion:
     description: Sends the current downloaded version to the sender
     aliases: [cmuv]
+  cheermeupreload:
+    description: Reloads the config
+    aliases: [cmureload]
