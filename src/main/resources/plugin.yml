@@ -11,6 +11,3 @@ commands:
   cheermeupversion:
     description: Sends the current downloaded version to the sender
     aliases: [cmuv]
-  cheermeupreload:
-    description: Reloads the config
-    aliases: [cmureload]

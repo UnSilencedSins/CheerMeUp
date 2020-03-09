@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.UnSilencedSins:SinsAPI:dbf04eaed8">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/UnSilencedSins/SinsAPI/dbf04eaed8/SinsAPI-dbf04eaed8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/UnSilencedSins/SinsAPI/dbf04eaed8/SinsAPI-dbf04eaed8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/UnSilencedSins/SinsAPI/dbf04eaed8/SinsAPI-dbf04eaed8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

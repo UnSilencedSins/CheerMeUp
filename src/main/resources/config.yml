@@ -1,4 +1,5 @@
 onJoin: true
+showAsTitle: false
 messages:
   - 'You are very cool!'
   - 'You have lots of friends.'
