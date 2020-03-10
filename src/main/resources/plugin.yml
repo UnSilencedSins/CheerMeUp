@@ -11,3 +11,6 @@ commands:
   cheermeupversion:
     description: Sends the current downloaded version to the sender
     aliases: [cmuv]
+  cheermeupconfig:
+    description: Base command for admins to edit the config.
+    aliases: [cmuconfig]
