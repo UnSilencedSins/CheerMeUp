@@ -61,6 +61,7 @@ public final class Core extends JavaPlugin implements CommandExecutor, Listener 
             if (!player.hasPermission("cheermeup.config")) { //they didnt have the right permission
 
                 player.sendMessage(ChatColor.RED + "You don't have permission to run this command!");
+                return true;
             } else { //they did have the right permission
 
                 if (args.length > 0) { //doing a child command
@@ -82,11 +83,13 @@ public final class Core extends JavaPlugin implements CommandExecutor, Listener 
 
                                         getConfig().set("onJoin", true);
                                         saveConfig();
+                                        onJoin = true;
                                         player.sendMessage(ChatColor.GREEN + "Set onJoin to true");
                                     } else if (args[2].equalsIgnoreCase("false")) { //setting onJoin to false
 
                                         getConfig().set("onJoin", false);
                                         saveConfig();
+                                        onJoin = false;
                                         player.sendMessage(ChatColor.GREEN + "Set onJoin to false");
                                     } else { //incorrect value
 
@@ -108,12 +111,14 @@ public final class Core extends JavaPlugin implements CommandExecutor, Listener 
 
                                     getConfig().set("showAsTitle", true);
                                     saveConfig();
+                                    showTitle = true;
                                     player.sendMessage(ChatColor.GREEN + "Set showAsTitle to true");
                                 }
                                 else if (args[2].equalsIgnoreCase("false")) { //setting showAsTitle option to false
 
                                     getConfig().set("showAsTitle", false);
                                     saveConfig();
+                                    showTitle = false;
                                     player.sendMessage(ChatColor.GREEN + "Set showAsTitle to false");
                                 }
                                 else { //incorrect value entered
